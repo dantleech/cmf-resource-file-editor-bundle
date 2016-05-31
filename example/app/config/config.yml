@@ -11,6 +11,8 @@ twig:
     strict_variables: true
 
 cmf_resource:
+    description:
+        enhancers: [ "cmf_file_editor" ]
     repositories:
         default:
             type: filesystem

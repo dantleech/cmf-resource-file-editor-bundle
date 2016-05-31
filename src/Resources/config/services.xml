@@ -10,5 +10,11 @@
             <argument type="service" id="templating" />
             <tag name="controller" />
         </service>
+
+        <service id="cmf_file_editor.description.enhancer" class="Symfony\Cmf\Bundle\FileEditorBundle\Resource\FileEditorEnhancer">
+            <argument type="service" id="router" />
+            <tag name="cmf_resource.description.enhancer" alias="cmf_file_editor" />
+        </service>
     </services>
+
 </container>
