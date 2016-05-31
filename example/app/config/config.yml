@@ -1,0 +1,19 @@
+framework:
+    secret: secret
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+    templating:
+        engines: ['twig']
+
+twig:
+    debug: true
+    strict_variables: true
+
+cmf_resource:
+    repositories:
+        default:
+            type: filesystem
+            base_dir: %kernel.root_dir%/../data
+
+cmf_file_editor:

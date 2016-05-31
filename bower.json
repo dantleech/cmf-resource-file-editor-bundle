@@ -1,0 +1,17 @@
+{
+    "name": "symfony-cmf/file-editor-bundle",
+    "homepage": "http://cmf.symfony.com",
+    "keywords": ["Symfony CMF", "file", "phpcr"],
+    "authors": [
+        {
+            "name": "Symfony CMF Community",
+            "homepage": "https://github.com/symfony-cmf/TreeBrowserBundle/contributors"
+        }
+    ],
+    "license": "MIT",
+    "dependencies": {
+        "ace-builds": "1.2.*"
+    },
+    "private": true,
+    "ignore": ["*"]
+}

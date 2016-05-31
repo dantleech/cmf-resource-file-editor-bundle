@@ -1,0 +1,36 @@
+<style type="text/css" media="screen">
+    #editor { 
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+</style>
+
+<h3>{{ resource.name }}</h3>
+
+<form method="POST">
+    <textarea style="display: none" name="body" id="body" ></textarea>
+    <input type="submit" value="Save{{ editable ? '' : ' (read only)' }}" {{ editable ? '': 'disabled="true"' }}>
+</form>
+
+<div style="position: relative; width: 100%; height: 100%">
+    <div id="editor">{{ resource.body }}</div>
+</div>
+<script src="{{ asset('bundles/fileeditor/ace/ace.js') }}" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    var textarea = document.getElementById('body');
+
+    {% if not editable %}
+        editor.setReadOnly(true);
+    {% endif %}
+
+    editor.setTheme("ace/theme/monokai");
+    editor.getSession().setMode("ace/mode/javascript");
+    editor.getSession().on('change', function () {
+        textarea.value = editor.getSession().getValue();
+    });
+    textarea.value = editor.getSession().getValue();
+</script>

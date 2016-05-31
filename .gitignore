@@ -1,0 +1,8 @@
+vendor/
+composer.lock
+phpunit.xml
+composer.phar
+bower_components
+src/Resources/public/ace
+example/web/bundles
+example/var

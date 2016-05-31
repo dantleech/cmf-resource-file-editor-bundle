@@ -1,0 +1,3 @@
+cmf_admin:
+    resource: "@CmfFileEditorBundle/Resources/config/routing/routing.xml"
+    prefix:   /

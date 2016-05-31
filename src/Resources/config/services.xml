@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="cmf_file_editor.controller.editor" class="Symfony\Cmf\Bundle\FileEditorBundle\Controller\EditorController">
+            <argument type="service" id="cmf_resource.registry" />
+            <argument type="service" id="templating" />
+            <tag name="controller" />
+        </service>
+    </services>
+</container>
